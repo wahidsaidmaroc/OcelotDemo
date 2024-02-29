@@ -1,0 +1,25 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:58"
+  },
+
+  "Routes": [
+
+    //Demo API Rest with controlleur
+    {
+      "UpstreamPathTemplate": "/GetWeatherForecast",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamPathTemplate": "/api/getForcast",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5142
+        }
+      ]
+
+    }
+  ]
+
+}
